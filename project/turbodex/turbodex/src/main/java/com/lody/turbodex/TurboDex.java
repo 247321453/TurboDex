@@ -15,14 +15,14 @@ public class TurboDex {
     static native void nativeDisableTurboDex();
 
     public static boolean enableTurboDex() {
-        if (isArtMode()) {
+//        if (isArtMode()) {
             try {
                 nativeEnableTurboDex();
                 return true;
             } catch (Throwable e) {
                 e.printStackTrace();
             }
-        }
+//        }
         return false;
     }
 
