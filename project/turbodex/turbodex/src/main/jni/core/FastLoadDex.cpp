@@ -17,7 +17,7 @@ int my_execv(const char *name, char **argv) {
 		#endif
 
 		if(enable && strcmp(name, DEX2OAT_BIN) == 0) {
-			exit(0);
+		//	exit(0);
 		}
 		
   		return org_execv(name, argv);

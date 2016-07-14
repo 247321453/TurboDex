@@ -12,10 +12,15 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		TurboDex.enableTurboDex();
-		TurboDex.disableTurboDex();
+		boolean hook = false;
+		try {
+			hook = TurboDex.enableTurboDex();
+			TurboDex.disableTurboDex();
+		} catch (Exception e) {
+
+		}
 		String file = "/data/data/com.wadahana.testhook/b.txt";
-		Toast.makeText(this, "b.txt?=" + new File(file).exists(), Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, hook+"/b.txt?=" + new File(file).exists(), Toast.LENGTH_SHORT).show();
 		// File dbDir = getDatabasePath("test.db").getParentFile();
 		// NativeIO.open();
 		// try {
