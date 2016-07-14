@@ -28,7 +28,7 @@
 #define MSLogLevelWarning ANDROID_LOG_WARN
 #define MSLogLevelError ANDROID_LOG_ERROR
 
-#define DEBUG 1
+//#define DEBUG 1
 #define EXE_PRINTF 0
 #ifndef LOG_TAG
 	# define LOG_TAG "Native_X"
